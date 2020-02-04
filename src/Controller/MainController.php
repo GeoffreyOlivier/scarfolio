@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Contact;
 use App\Entity\Photos;
+use App\Entity\SousCat;
 use App\Form\ContactType;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -61,6 +62,9 @@ class MainController extends AbstractController
         $gamedesign = $repo->findBy(array('categorie' => 6));
         $modele3d = $repo->findBy(array('categorie' => 8));
 
+        $repo = $this->getDoctrine()->getRepository(SousCat::class);
+        $sousCat = $repo->findAll();
+
 
         return $this->render('index/index.html.twig', [
             'dessin' => $dessin,
@@ -68,6 +72,7 @@ class MainController extends AbstractController
             'gamedesign' => $gamedesign,
             'modele3d' => $modele3d,
             'all' => $all,
+            'souscat' => $sousCat,
         ]);
 
     }
