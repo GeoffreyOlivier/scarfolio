@@ -108,11 +108,23 @@
                         <button class="btn" data-filter=".game">Game Design</button>
                         <button class="btn" data-filter=".level">Level Design</button>
                         <button class="btn" data-filter=".model">Modèle 3D</button>
+                        <div class="btn btn-group">
+                            <button type="button" class="btn " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Action
+                            </button>
+                            <div class="dropdown-menu">
+                                {% for souscat in souscat %}
+                                    <button class="dropdown-item"  data-filter=".game" >{{ souscat.titre }}</button>
+                                {% endfor %}
+                            </div>
+                        </div>
                         <button class="btn" data-filter=".dessin">Dessin</button>
                     </div>
                 </div>
             </div>
         </div>
+    <!-- Main Header Start -->
+
 
         <div class="row alime-portfolio">
             <!-- Single Gallery Item -->
