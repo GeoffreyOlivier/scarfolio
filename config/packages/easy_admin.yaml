@@ -16,7 +16,6 @@ easy_admin:
             list:
                 fields:
                     - { property: 'libelle'}
-                    - { property: 'categorie'}
                     - { property: 'description'}
                     - { property: 'image', type: 'image', base_path: 'uploads'}
             form:
@@ -24,21 +23,23 @@ easy_admin:
                     - { property: 'imageFile', type: 'file', base_path: 'uploads'}
                     - { property: 'libelle'}
                     - { property: 'description'}
-                    - { property: 'categorie', label: 'categorie'}
-                    - { property: 'sousCat', label: 'sous categorie'}
+                    - { property: 'dossier'}
+
+
                     
-        SousCat:
-            class: App\Entity\SousCat
+        Dossier:
+            class: App\Entity\Dossier
             list:
                 fields:
-                    - { property: 'titre'}
+                    - { property: 'libelle'}
                     - { property: 'description'}
+
                     
             form:
                 fields:
-                    - { property: 'titre'}
+                    - { property: 'libelle'}
                     - { property: 'description'}
-
+                    - { property: 'categorie'}
 
 
 

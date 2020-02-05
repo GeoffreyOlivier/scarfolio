@@ -43,24 +43,14 @@ class Photos
     private $imageFile;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Categorie", inversedBy ="Photos")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Dossier", inversedBy="photos")
      */
-    private $categorie;
+    private $dossier = [];
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\SousCat", inversedBy ="photos")
-     */
-    private $sousCat;
-
-    public function __construct()
+       public function __construct()
     {
-        $this->sousCat = new ArrayCollection();
+        $this->dossier = new ArrayCollection();
     }
-
-
-
-
 
 //    public function setImageFile(File $image = null)
 //    {
@@ -102,18 +92,6 @@ class Photos
         return $this;
     }
 
-    public function getCategorie(): ?Categorie
-    {
-        return $this->categorie;
-    }
-
-    public function setCategorie(?Categorie $categorie): self
-    {
-        $this->categorie = $categorie;
-
-        return $this;
-    }
-
     public function getDescription(): ?string
     {
         return $this->description;
@@ -138,36 +116,19 @@ class Photos
         return $this;
     }
 
-    /**
-     * @return Collection|sousCat[]
-     */
-    public function getSousCat(): Collection
+    public function getDossier(): ArrayCollection
     {
-        return $this->sousCat;
+        return $this->dossier;
     }
 
-    public function addSousCat(sousCat $sousCat): self
+    public function setDossier(?Dossier $dossier): self
     {
-        if (!$this->sousCat->contains($sousCat)) {
-            $this->sousCat[] = $sousCat;
-            $sousCat->setPhotos($this);
-        }
+        $this->dossier = $dossier;
 
         return $this;
     }
 
-    public function removeSousCat(sousCat $sousCat): self
-    {
-        if ($this->sousCat->contains($sousCat)) {
-            $this->sousCat->removeElement($sousCat);
-            // set the owning side to null (unless already changed)
-            if ($sousCat->getPhotos() === $this) {
-                $sousCat->setPhotos(null);
-            }
-        }
 
-        return $this;
-    }
 
 
 

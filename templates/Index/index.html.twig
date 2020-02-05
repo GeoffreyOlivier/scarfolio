@@ -104,20 +104,18 @@
                 <!-- Projects Menu -->
                 <div class="alime-projects-menu">
                     <div class="portfolio-menu text-center">
-                        <button class="btn active" data-filter="*">Tous</button>
                         <button class="btn" data-filter=".game">Game Design</button>
                         <button class="btn" data-filter=".level">Level Design</button>
                         <button class="btn" data-filter=".model">Modèle 3D</button>
-                        <div class="btn btn-group">
                             <button type="button" class="btn " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Action
                             </button>
                             <div class="dropdown-menu">
-                                {% for souscat in souscat %}
-                                    <button class="dropdown-item"  data-filter=".game" >{{ souscat.titre }}</button>
+                                {% for modele in modele %}
+                                    <button class="dropdown-item"  data-filter=".{{ modele.id }}" >{{ modele.libelle }}</button>
                                 {% endfor %}
                             </div>
-                        </div>
+
                         <button class="btn" data-filter=".dessin">Dessin</button>
                     </div>
                 </div>
@@ -129,58 +127,47 @@
         <div class="row alime-portfolio">
             <!-- Single Gallery Item -->
 
-            {% for gamedesign in gamedesign %}
-            <div class="col-12 col-sm-6 col-lg-3 single_gallery_item game mb-30 wow fadeInUp" data-wow-delay="100ms">
+
+
+            {% for photo in photo %}
+            <div class="col-12 col-sm-6 col-lg-3 single_gallery_item {{ photo.id }} mb-30 wow fadeInUp" data-wow-delay="100ms">
                 <div class="single-portfolio-content">
-                    <img src="{{ asset("uploads/" ~ gamedesign.image) }}" alt="">
-                    <div class="hover-content">
-                        <a href="{{ asset("uploads/" ~ gamedesign.image) }}" class="portfolio-img">+</a>
-                    </div>
-                    <div class="align-items-center">
-                        {{ gamedesign.description }}
+                    <img src="{{ asset("uploads/" ~ photo.image) }}" alt="">
+{#                    <div class="hover-content">#}
+{#                        <a href="{{ asset("uploads/" ~ level.image) }}" class="portfolio-img">+</a>#}
+{#                    </div>#}
+{#                    <div class="align-items-center">#}
+{#                        {{ level.description }}#}
                     </div>
                 </div>
             </div>
             {% endfor %}
-            {% for level in level %}
-            <div class="col-12 col-sm-6 col-lg-3 single_gallery_item level mb-30 wow fadeInUp" data-wow-delay="100ms">
-                <div class="single-portfolio-content">
-                    <img src="{{ asset("uploads/" ~ level.image) }}" alt="">
-                    <div class="hover-content">
-                        <a href="{{ asset("uploads/" ~ level.image) }}" class="portfolio-img">+</a>
-                    </div>
-                    <div class="align-items-center">
-                        {{ level.description }}
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-            {% for modele3d in modele3d %}
-            <div class="col-12 col-sm-6 col-lg-3 single_gallery_item model mb-30 wow fadeInUp" data-wow-delay="100ms">
-                <div class="single-portfolio-content">
-                    <img src="{{ asset("uploads/" ~ modele3d.image) }}" alt="">
-                    <div class="hover-content">
-                        <a href="{{ asset("uploads/" ~ modele3d.image) }}" class="portfolio-img">+</a>
-                    </div>
-                    <div class="align-items-center">
-                        {{ modele3d.description }}
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-            {% for dessin in dessin %}
-            <div class="col-12 col-sm-6 col-lg-3 single_gallery_item dessin mb-30 wow fadeInUp" data-wow-delay="100ms">
-                <div class="single-portfolio-content">
-                    <img src="{{ asset("uploads/" ~ dessin.image) }}" alt="">
-                    <div class="hover-content">
-                        <a href="{{ asset("uploads/" ~ dessin.image) }}" class="portfolio-img">+</a>
-                    </div>
-                    <div class="align-items-center">
-                        {{ dessin.description }}
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
+{#            {% for modele3d in modele3d %}#}
+{#            <div class="col-12 col-sm-6 col-lg-3 single_gallery_item model mb-30 wow fadeInUp" data-wow-delay="100ms">#}
+{#                <div class="single-portfolio-content">#}
+{#                    <img src="{{ asset("uploads/" ~ modele3d.image) }}" alt="">#}
+{#                    <div class="hover-content">#}
+{#                        <a href="{{ asset("uploads/" ~ modele3d.image) }}" class="portfolio-img">+</a>#}
+{#                    </div>#}
+{#                    <div class="align-items-center">#}
+{#                        {{ modele3d.description }}#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            {% endfor %}#}
+{#            {% for dessin in dessin %}#}
+{#            <div class="col-12 col-sm-6 col-lg-3 single_gallery_item dessin mb-30 wow fadeInUp" data-wow-delay="100ms">#}
+{#                <div class="single-portfolio-content">#}
+{#                    <img src="{{ asset("uploads/" ~ dessin.image) }}" alt="">#}
+{#                    <div class="hover-content">#}
+{#                        <a href="{{ asset("uploads/" ~ dessin.image) }}" class="portfolio-img">+</a>#}
+{#                    </div>#}
+{#                    <div class="align-items-center">#}
+{#                        {{ dessin.description }}#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            {% endfor %}#}
 
             <!-- Single Gallery Item -->
 
