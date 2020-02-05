@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18d04b26-6a82-403f-b110-a820ca31a891" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Categorie.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Photos.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Photos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/SousCat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Dossier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CategorieRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/DossierRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/SousCatRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/TapezUnMessageRepository.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Index/index.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -151,7 +158,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

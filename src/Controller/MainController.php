@@ -3,8 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Contact;
+use App\Entity\Dossier;
 use App\Entity\Photos;
-use App\Entity\SousCat;
+use App\Entity\Categorie;
 use App\Form\ContactType;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -55,24 +56,24 @@ class MainController extends AbstractController
     public function index(): Response
     {
 
-        $repo = $this->getDoctrine()->getRepository(Photos::class);
-        $all = $repo->findAll();
-        $dessin = $repo->findBy(array('categorie' => 5 ));
-        $level = $repo->findBy(array('categorie' => 7 ));
-        $gamedesign = $repo->findBy(array('categorie' => 6));
-        $modele3d = $repo->findBy(array('categorie' => 8));
+        $repo = $this->getDoctrine()->getRepository(Dossier::class);
 
-        $repo = $this->getDoctrine()->getRepository(SousCat::class);
-        $sousCat = $repo->findAll();
+        $game = $repo->findBy(array('categorie' => 1 ));
+        $level = $repo->findBy(array('categorie' => 2 ));
+        $dessin = $repo->findBy(array('categorie' => 3 ));
+        $modele = $repo->findBy(array('categorie' => 4 ));
+
+        $repo = $this->getDoctrine()->getRepository(Photos::class);
+        $photo = $repo->findAll();
 
 
         return $this->render('index/index.html.twig', [
-            'dessin' => $dessin,
+            'game' => $game,
             'level' => $level,
-            'gamedesign' => $gamedesign,
-            'modele3d' => $modele3d,
-            'all' => $all,
-            'souscat' => $sousCat,
+            'dessin' => $dessin,
+            'modele' => $modele,
+            'photo' => $photo,
+
         ]);
 
     }
