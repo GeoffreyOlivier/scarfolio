@@ -23,56 +23,22 @@ class Categorie
      */
     private $libelle;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Photos", mappedBy="categorie")
-     */
-    private $Photos;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\SousCat", inversedBy="categorie")
+     * @ORM\OneToMany(targetEntity="App\Entity\categorie", mappedBy="categorie")
      */
-    private $sousCat;
+    private $categorie;
 
-    
+
+
     public function __construct()
     {
-        $this->Photos = new ArrayCollection();
+        $this->categorie = new ArrayCollection();
     }
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    /**
-     * @return Collection|Photos[]
-     */
-    public function getPhotos(): Collection
-    {
-        return $this->Photos;
-    }
-
-    public function addPhotos(Photos $Photos): self
-    {
-        if (!$this->Photos->contains($Photos)) {
-            $this->Photos[] = $Photos;
-            $Photos->setCategorie($this);
-        }
-
-        return $this;
-    }
-
-    public function removePhotos(Photos $Photos): self
-    {
-        if ($this->Photos->contains($Photos)) {
-            $this->Photos->removeElement($Photos);
-            // set the owning side to null (unless already changed)
-            if ($Photos->getCategorie() === $this) {
-                $Photos->setCategorie(null);
-            }
-        }
-
-        return $this;
     }
 
     public function getLibelle(): ?string
@@ -87,21 +53,39 @@ class Categorie
         return $this;
     }
 
-    public function __toString()
+    /**
+     * @return Collection|Dossier[]
+     */
+    public function getCategorie(): Collection
     {
-        return $this->libelle;
+        return $this->categorie;
     }
 
-    public function getSousCat(): ?SousCat
+    public function addCategorie(Dossier $categorie): self
     {
-        return $this->sousCat;
-    }
-
-    public function setSousCat(?SousCat $sousCat): self
-    {
-        $this->sousCat = $sousCat;
+        if (!$this->categorie->contains($categorie)) {
+            $this->categorie[] = $categorie;
+            $categorie->SetCategorie($this);
+        }
 
         return $this;
     }
 
+    public function removeCategorie(Dossier $categorie): self
+    {
+        if ($this->categorie->contains($categorie)) {
+            $this->categorie->removeElement($categorie);
+            // set the owning side to null (unless already changed)
+            if ($categorie->getCategorie() === $this) {
+                $categorie->SetCategorie(null);
+            }
+        }
+
+        return $this;
+    }
+    
+      public function __toString()
+    {
+        return $this->libelle;
+    }
 }
