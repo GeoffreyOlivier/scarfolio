@@ -44,8 +44,9 @@ class Photos
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Dossier", inversedBy="photos")
+     * @var Collection
      */
-    private $dossier = [];
+    private $dossier;
 
        public function __construct()
     {
@@ -116,7 +117,7 @@ class Photos
         return $this;
     }
 
-    public function getDossier(): ArrayCollection
+    public function getDossier()
     {
         return $this->dossier;
     }
