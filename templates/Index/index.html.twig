@@ -130,15 +130,13 @@
 
 
             {% for photo in photo %}
-            <div class="col-12 col-sm-6 col-lg-3 single_gallery_item {{ photo.id }} mb-30 wow fadeInUp" data-wow-delay="100ms">
+            <div class="col-12 col-sm-6 col-lg-3 single_gallery_item {{ photo.dossier.id }} mb-30 wow fadeInUp" data-wow-delay="100ms">
                 <div class="single-portfolio-content">
                     <img src="{{ asset("uploads/" ~ photo.image) }}" alt="">
-{#                    <div class="hover-content">#}
-{#                        <a href="{{ asset("uploads/" ~ level.image) }}" class="portfolio-img">+</a>#}
-{#                    </div>#}
-{#                    <div class="align-items-center">#}
-{#                        {{ level.description }}#}
-                    </div>
+                   <div class="hover-content">
+                       <a href="{{ asset("uploads/" ~ photo.image) }}" class="portfolio-img">+</a>
+                   </div>
+
                 </div>
             </div>
             {% endfor %}
