@@ -48,6 +48,11 @@ class Photos
      */
     private $dossier;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\categorie", inversedBy="photos")
+     */
+    private $categorie;
+
        public function __construct()
     {
         $this->dossier = new ArrayCollection();
@@ -125,6 +130,18 @@ class Photos
     public function setDossier(?Dossier $dossier): self
     {
         $this->dossier = $dossier;
+
+        return $this;
+    }
+
+    public function getCategorie(): ?categorie
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(?categorie $categorie): self
+    {
+        $this->categorie = $categorie;
 
         return $this;
     }

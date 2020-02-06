@@ -29,11 +29,17 @@ class Categorie
      */
     private $categorie;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Photos", mappedBy="categorie")
+     */
+    private $photos;
+
 
 
     public function __construct()
     {
         $this->categorie = new ArrayCollection();
+        $this->photos = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -88,4 +94,35 @@ class Categorie
     {
         return $this->libelle;
     }
+
+      /**
+       * @return Collection|Photos[]
+       */
+      public function getPhotos(): Collection
+      {
+          return $this->photos;
+      }
+
+      public function addPhoto(Photos $photo): self
+      {
+          if (!$this->photos->contains($photo)) {
+              $this->photos[] = $photo;
+              $photo->setCategorie($this);
+          }
+
+          return $this;
+      }
+
+      public function removePhoto(Photos $photo): self
+      {
+          if ($this->photos->contains($photo)) {
+              $this->photos->removeElement($photo);
+              // set the owning side to null (unless already changed)
+              if ($photo->getCategorie() === $this) {
+                  $photo->setCategorie(null);
+              }
+          }
+
+          return $this;
+      }
 }
