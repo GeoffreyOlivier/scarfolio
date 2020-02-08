@@ -1,6 +1,8 @@
 {% extends ('base.html.twig') %}
 {% block body %}
 <!-- Preloader -->
+
+
 <div id="preloader">
     <div class="loader"></div>
 </div>
@@ -104,11 +106,10 @@
                 <!-- Projects Menu -->
                 <div class="alime-projects-menu">
                     <div class="portfolio-menu text-center">
-                        <button class="btn" data-filter=".game">Game Design</button>
+                        <button class="btn active" data-filter=".game">Game Design</button>
                         <button class="btn" data-filter=".level">Level Design</button>
-                        <button class="btn" data-filter=".model">Modèle 3D</button>
                             <button type="button" class="btn " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Action
+                                Modèle 3D
                             </button>
                             <div class="dropdown-menu">
                                 {% for modele in modele %}
@@ -130,15 +131,32 @@
 
 
             {% for photo in photo %}
-            <div class="col-12 col-sm-6 col-lg-3 single_gallery_item {{ photo.dossier.id }} mb-30 wow fadeInUp" data-wow-delay="100ms">
-                <div class="single-portfolio-content">
-                    <img src="{{ asset("uploads/" ~ photo.image) }}" alt="">
-                   <div class="hover-content">
-                       <a href="{{ asset("uploads/" ~ photo.image) }}" class="portfolio-img">+</a>
-                   </div>
+                {% if photo.dossier != null %}
+                    <div class="col-12 col-sm-6 col-lg-3 single_gallery_item {{ photo.dossier.id }} mb-30 wow fadeInUp"
+                        data-wow-delay="100ms">
+                        <div class="single-portfolio-content">
+                            <img src="{{ asset("uploads/" ~ photo.image) }}" alt="">
+                            <div class="hover-content">
+                                <a href="{{ asset("uploads/" ~ photo.image) }}" class="portfolio-img">+</a>
+                            </div>
+                    
+                        </div>
+                    </div>
+                {% else %}
 
-                </div>
-            </div>
+                    <div class="col-12 col-sm-6 col-lg-3 single_gallery_item {{ photo.categorie.libelle }} mb-30 wow fadeInUp"
+                        data-wow-delay="100ms">
+                        <div class="single-portfolio-content">
+                            <img src="{{ asset("uploads/" ~ photo.image) }}" alt="">
+                            <div class="hover-content">
+                                <a href="{{ asset("uploads/" ~ photo.image) }}" class="portfolio-img">+</a>
+                            </div>
+                    
+                        </div>
+                    </div>
+
+                {% endif %}
+
             {% endfor %}
 {#            {% for modele3d in modele3d %}#}
 {#            <div class="col-12 col-sm-6 col-lg-3 single_gallery_item model mb-30 wow fadeInUp" data-wow-delay="100ms">#}
@@ -223,8 +241,14 @@
                 </div>
             </div>
         </footer>
-        <!-- Footer Area End -->
 
+        
+        <!-- Footer Area End -->
+        <script>
+            jQuery(document).ready(function () {
+                console.log("Script working properly");
+            });
+        </script>
         <!-- **** All JS Files ***** -->
         <!-- jQuery 2.2.4 -->
         <script src="js/jquery.min.js"></script>

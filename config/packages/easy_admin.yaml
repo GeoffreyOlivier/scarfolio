@@ -24,6 +24,8 @@ easy_admin:
                     - { property: 'libelle'}
                     - { property: 'description'}
                     - { property: 'dossier'}
+                    - { property: 'categorie'}
+
 
 
                     
