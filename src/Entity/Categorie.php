@@ -25,7 +25,7 @@ class Categorie
 
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\categorie", mappedBy="categorie")
+     * @ORM\OneToMany(targetEntity="App\Entity\Categorie", mappedBy="categorie")
      */
     private $categorie;
 

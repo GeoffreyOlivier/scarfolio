@@ -49,7 +49,7 @@ class Photos
     private $dossier;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\categorie", inversedBy="photos")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Categorie", inversedBy="photos")
      */
     private $categorie;
 
