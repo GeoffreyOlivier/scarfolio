@@ -1,16 +1,16 @@
 easy_admin:
     disabled_actions: []
     entities:
-        Contact_clients:
-            class: App\Entity\Contact
-            list:
-                fields:
-                    - { property: 'nom'}
-                    - { property: 'societe'}
-                    - { property: 'numero'}
-                    - { property: 'email'}
-                    - { property: 'message'}
-                    - { property: 'document', template: 'contract.html.twig', base_path: '%kernel.project_dir%' }
+#        Contact_clients:
+#            class: App\Entity\Contact
+#            list:
+#                fields:
+#                    - { property: 'nom'}
+#                    - { property: 'societe'}
+#                    - { property: 'numero'}
+#                    - { property: 'email'}
+#                    - { property: 'message'}
+#                    - { property: 'document', template: 'contract.html.twig', base_path: '%kernel.project_dir%' }
         Photos:
             class: App\Entity\Photos
             list:
@@ -24,6 +24,7 @@ easy_admin:
                     - { property: 'libelle'}
                     - { property: 'description'}
                     - { property: 'dossier'}
+                    - { property: 'categorie'}
 
 
                     
