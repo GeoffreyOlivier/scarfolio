@@ -267,7 +267,7 @@ input:required {
 
 .section-padding-80 {
   padding-top: 80px;
-  padding-bottom: 80px; }
+  padding-bottom: 1px; }
 
 .section-padding-0-80 {
   padding-top: 0;
