@@ -106,15 +106,14 @@
                     <div class="portfolio-menu text-center">
                         <button class="btn active" data-filter=".game">Game Design</button>
                         <button class="btn" data-filter=".level">Level Design</button>
-                            <button type="button" class="btn" data-filter="none"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Modèle 3D
-                            </button>
-                            <div class="dropdown-menu">
-                                {% for modele in modele %}
-                                    <button class="dropdown-item"  data-filter=".{{ modele.id }}" >{{ modele.libelle }}</button>
-                                {% endfor %}
-                            </div>
-
+                        <button type="button" class="btn " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Modèle 3D
+                        </button>
+                        <div class="dropdown-menu">
+                            {% for modele in modele %}
+                                <button class="dropdown-item"  data-filter=".{{ modele.id }}" >{{ modele.libelle }}</button>
+                            {% endfor %}
+                        </div>
                         <button class="btn" data-filter=".dessin">Dessin</button>
                     </div>
                 </div>
@@ -185,6 +184,21 @@
 
         
         <!-- Footer Area End -->
-       
+        <script>
+            jQuery(document).ready(function () {
+                console.log("Script working properly");
+            });
+        </script>
+        <!-- **** All JS Files ***** -->
+        <!-- jQuery 2.2.4 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="js/alime.bundle.js"></script>
+    <!-- Active -->
+    <script src="js/default-assets/active.js"></script>
 
 {% endblock %}
