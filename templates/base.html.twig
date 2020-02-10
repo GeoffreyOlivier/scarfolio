@@ -28,7 +28,25 @@
 
 <body>
     {% block body %}{% endblock %}
-    {% block javascripts %}{% endblock %}
+    {% block javascripts %}
+    
+        <!-- **** All JS Files ***** -->
+        <!-- jQuery 2.2.4 -->
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        
+        
+        <!-- Popper -->
+        <script src="{{ asset('js/popper.min.js') }}"></script>
+        <!-- Bootstrap -->
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <!-- All Plugins -->
+        <script src="{{ asset('js/alime.bundle.js') }}"></script>
+        <!-- Active -->
+        <script src="{{ asset('js/default-assets/active.js') }}"></script>
+        {#        <link rel="icon" href="{{ asset(./img/core-img/favicon.png) }}">#}
+        <script src="{{ asset('js/js-index.js') }}"></script>
+    
+    {% endblock %}
 </body>
 
 </html>
