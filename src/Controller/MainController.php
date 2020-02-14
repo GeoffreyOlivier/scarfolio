@@ -64,7 +64,7 @@ class MainController extends AbstractController
         $modele = $repo->findBy(array('categorie' => 4 ));
 
         $repo = $this->getDoctrine()->getRepository(Photos::class);
-        $photo = $repo->findAll();
+        $photo = $repo->findBy(array(), array('dossier' => 'ASC'));
 
 
         return $this->render('index/index.html.twig', [
