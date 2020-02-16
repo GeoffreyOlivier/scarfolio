@@ -25,11 +25,6 @@ class Photos
      * @ORM\Column(type="string", length=255)
      */
     private $libelle;
-    
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $description;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -94,18 +89,6 @@ class Photos
     public function setLibelle(string $libelle): self
     {
         $this->libelle = $libelle;
-
-        return $this;
-    }
-
-    public function getDescription(): ?string
-    {
-        return $this->description;
-    }
-
-    public function setDescription(string $description): self
-    {
-        $this->description = $description;
 
         return $this;
     }
