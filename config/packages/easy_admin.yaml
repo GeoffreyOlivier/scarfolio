@@ -1,4 +1,11 @@
 easy_admin:
+    design:
+        form_theme:
+            - '@EasyAdmin/form/bootstrap_4.html.twig'
+            - '@VichUploader/Form/fields.html.twig'
+    site_name: 'ScarFolio'
+
+
     disabled_actions: []
     entities:
 #        Contact_clients:
@@ -16,7 +23,6 @@ easy_admin:
             list:
                 fields:
                     - { property: 'libelle'}
-                    - { property: 'description'}
                     - { property: 'image', type: 'image', base_path: 'uploads'}
             form:
                 fields:
@@ -25,10 +31,6 @@ easy_admin:
                     - { property: 'description'}
                     - { property: 'dossier'}
                     - { property: 'categorie'}
-
-
-
-                    
         Dossier:
             class: App\Entity\Dossier
             list:
@@ -48,8 +50,6 @@ easy_admin:
 
 
 
-    design:
-        form_theme:
-            - '@EasyAdmin/form/bootstrap_4.html.twig'
-            - '@VichUploader/Form/fields.html.twig'
+
+
 

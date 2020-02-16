@@ -30,9 +30,9 @@
         welcomeSlider.owlCarousel({
             items: 1,
             loop: true,
-            autoplay: true,
+            autoplay: false,
             smartSpeed: 1000,
-            autoplayTimeout: 10000,
+            autoplayTimeout: 100000,
             nav: true,
             navText: [('<i class="ti-arrow-left"></i>'), ('<i class="ti-arrow-right"></i>')]
         })

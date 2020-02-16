@@ -13,7 +13,8 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <!-- Close -->
-                        <button type="button" class="btn close-btn" data-dismiss="modal"><i class="ti-close"></i></button>
+                        <button type="button" class="btn close-btn" data-dismiss="modal"><i class="ti-close"></i>
+                        </button>
                         <!-- Form -->
                         <form action="index.html.twig" method="post">
                             <input type="search" name="top-search-bar" class="form-control"
@@ -33,13 +34,12 @@
             <div class="classy-nav-container breakpoint-off">
                 <div class="container">
                     <!-- Classy Menu -->
-                    <nav class="classy-navbar justify-content-between" id="alimeNav">
+                    <nav class="classy-navbar justify-content-end" id="alimeNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html.twig"><img src="./img/core-img/logo.png" alt=""></a>
 
                         <!-- Navbar Toggler -->
-                        <div class="classy-navbar-toggler">
+                        <div class="classy-navbar-toggler  ">
                             <span class="navbarToggler"><span></span><span></span><span></span></span>
                         </div>
 
@@ -50,10 +50,10 @@
                                 <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                             </div>
                             <!-- Nav Start -->
-                            <div class="classynav">
+                            <div class="classynav owl-nav">
                                 <ul id="nav">
                                     <li class="active"><a href="index.html.twig">Home</a></li>
-                                    <li><a href="./about.html">Présentation</a></li>
+                                    <li><a class="owl-next " >Présentation</a></li>
                                     <li><a href="./contact.html">Contact</a></li>
                                 </ul>
                             </div>
@@ -76,10 +76,12 @@
                         <!-- Welcome Text -->
                         <div class="col-12 col-lg-8 col-xl-6">
                             <div class="welcome-text">
-                                <h2 data-animation="bounceInDown" data-delay="900ms">Antoine <br>Duchemin</h2>
-                                <p data-animation="bounceInDown" data-delay="500ms">I photograph very instinctively. I see
-                                    how it is taken like that. I do not follow certain styles, philosophies or teachers.</p>
-                                <div class="hero-btn-group" data-animation="bounceInDown" data-delay="100ms">
+                                <h2 >Antoine <br>Duchemin</h2>
+                                <p>I photograph very instinctively. I
+                                    see
+                                    how it is taken like that. I do not follow certain styles, philosophies or
+                                    teachers.</p>
+                                <div class="hero-btn-group">
                                     <a href="#" class="btn alime-btn mb-3 mb-sm-0 mr-4">Contact</a>
                                     <a class="hero-mail-contact"
                                        href="mailto:antoine.g.duchemin@gmail.com">antoine.g.duchemin@gmail.com</a>
@@ -97,29 +99,34 @@
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <!-- Welcome Text -->
-                        <div class="col-12 col-lg-8 col-xl-6">
+                        <div class="col-12 col-lg-4 col-xl-6">
                             <div class="welcome-text">
-                                <h2 data-animation="bounceInDown" data-delay="900ms">Antoine <br>Duchemin</h2>
-                                <p data-animation="bounceInDown" data-delay="500ms">I photograph very instinctively. I see
-                                    how it is taken like that. I do not follow certain styles, philosophies or teachers.</p>
-                                <div class="hero-btn-group" data-animation="bounceInDown" data-delay="100ms">
-                                    <a href="#" class="btn alime-btn mb-3 mb-sm-0 mr-4">Contact</a>
-                                    <a class="hero-mail-contact"
-                                        href="mailto:antoine.g.duchemin@gmail.com">antoine.g.duchemin@gmail.com</a>
-                                </div>
+                                <img class="img-fluidC" src="img/photoProfilAntoine.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-8 col-xl-6">
+                                <p class="p-presentation ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                                    accusamus ad
+                                    adipisci aliquam animi at atque culpa doloremque doloribus ea earum enim eos et
+                                    labore
+                                    libero minima molestias, neque obcaecati odio omnis optio pariatur porro praesentium
+                                    deserunt doloremque dolorum ducimus earum, expedita fuga ipsum itaque labore
+                                    laudantium
+                                    provident rerum sed similique soluta. Animi, consequatur deserunt distinctio
+                                    dolore!</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Single Slide -->
 
         </div>
     </section>
     <!-- Welcome Area End -->
 
-    
+
 
     <!-- Gallery Area Start -->
     <div class="alime-portfolio-area section-padding-80 clearfix">
@@ -131,14 +138,16 @@
                     <div class="portfolio-menu text-center">
                         <button class="btn active" data-filter=".game">Game Design</button>
                         <button class="btn" data-filter=".level">Level Design</button>
-                            <button type="button" class="btn" data-filter="none"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Modèle 3D
-                            </button>
-                            <div class="dropdown-menu">
-                                {% for modele in modele %}
-                                    <button class="dropdown-item"  data-filter=".{{ modele.id }}" >{{ modele.libelle }}</button>
-                                {% endfor %}
-                            </div>
+                        <button type="button" class="btn" data-filter="none" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                            Modèle 3D
+                        </button>
+                        <div class="dropdown-menu">
+                            {% for modele in modele %}
+                                <button class="dropdown-item"
+                                        data-filter=".{{ modele.id }}">{{ modele.libelle }}</button>
+                            {% endfor %}
+                        </div>
 
                         <button class="btn" data-filter=".dessin">Dessin</button>
                     </div>
@@ -146,27 +155,28 @@
             </div>
         </div>
         <!-- Main Header Start -->
-    <div class="row alime-portfolio mb-5">
+        <div class="row alime-portfolio mb-5">
             <!-- Single Gallery Item -->
             {% set actual_folder = false %}
             {% for photo in photo %}
                 {% if photo.dossier != null %}
                     {% if actual_folder != photo.dossier.id %}
                         {% set actual_folder = photo.dossier.id %}
-                            <div class="col-12 col-sm-6 col-lg-3 single_gallery_item {{ photo.dossier.id }}  wow fadeInUp" data-wow-delay="100ms" >
-                                <h1>{{ photo.dossier.libelle }}</h1>
-                                <p>{{ photo.dossier.description }}</p>
-                            </div>                       
+                        <div class="col-12 col-sm-6 col-lg-3 single_gallery_item {{ photo.dossier.id }}  wow fadeInUp"
+                             data-wow-delay="100ms">
+                            <h1>{{ photo.dossier.libelle }}</h1>
+                            <p>{{ photo.dossier.description }}</p>
+                        </div>
                     {% endif %}
-                        <div class="col-12 col-sm-6 col-lg-3 single_gallery_item {{ photo.dossier.id }} mb-30 wow fadeInUp"
-                            data-wow-delay="100ms">
-                            <div class="single-portfolio-content">
-                                <img src="{{ asset("uploads/" ~ photo.image) }}" alt="">
-                                <div class="hover-content">
-                                    <a href="{{ asset("uploads/" ~ photo.image) }}" class="portfolio-img">+</a>
-                                </div>
+                    <div class="col-12 col-sm-6 col-lg-3 single_gallery_item {{ photo.dossier.id }} mb-30 wow fadeInUp"
+                         data-wow-delay="100ms">
+                        <div class="single-portfolio-content">
+                            <img src="{{ asset("uploads/" ~ photo.image) }}" alt="">
+                            <div class="hover-content">
+                                <a href="{{ asset("uploads/" ~ photo.image) }}" class="portfolio-img">+</a>
                             </div>
                         </div>
+                    </div>
                 {% else %}
                     <div class="col-12 col-sm-6 col-lg-3 single_gallery_item {{ photo.categorie.libelle }} mb-30 wow fadeInUp"
                          data-wow-delay="100ms">
@@ -182,10 +192,6 @@
             {% endfor %}
         </div>
     </div>
-
-
-
-
 
 
     <!-- Gallery Area End -->
@@ -235,20 +241,21 @@
                             <p>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                                <script>document.write(new Date().getFullYear());</script>
+                                All rights reserved |
                                 This template is made with <i class="far fa-heart"></i> by <a
-                                    href="https://colorlib.com" target="_blank">Colorlib</a>
+                                        href="https://colorlib.com" target="_blank">Colorlib</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
                         <!-- Footer Logo -->
-            
+
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-       
+
 
 {% endblock %}
