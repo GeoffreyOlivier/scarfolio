@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18d04b26-6a82-403f-b110-a820ca31a891" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/img/PhotoPresentation.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/bckgd2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/bckgd3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/bckgd4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/bckgd5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/feuille.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/feuille.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/feuille.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/js-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/js-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Index/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contract.html.twig" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,9 +127,17 @@
   <component name="ProjectId" id="1XLnvzeW4fotz8pqsTHWrXmRRuX" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\scarfolio\public\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\scarfolio\public\img" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -130,6 +151,16 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="index.html.twig" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/scarfolio/templates/Index/index.html.twig" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html.twig" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -142,7 +173,10 @@
       <updated>1580834476934</updated>
       <workItem from="1580834479331" duration="3862000" />
       <workItem from="1581872505637" duration="964000" />
-      <workItem from="1581929866108" duration="243000" />
+      <workItem from="1581929866108" duration="599000" />
+      <workItem from="1581943539549" duration="8438000" />
+      <workItem from="1581967295289" duration="4068000" />
+      <workItem from="1582023763970" duration="4811000" />
     </task>
     <servers />
   </component>

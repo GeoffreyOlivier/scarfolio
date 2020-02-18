@@ -28,7 +28,6 @@ easy_admin:
                 fields:
                     - { property: 'imageFile', type: 'file', base_path: 'uploads'}
                     - { property: 'libelle'}
-                    - { property: 'description'}
                     - { property: 'dossier'}
                     - { property: 'categorie'}
         Dossier:
