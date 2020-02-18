@@ -51,79 +51,114 @@
                             <!-- Nav Start -->
                             <div class="classynav owl-nav">
                                 <ul id="nav">
-                                    <li class="active"><a href="index.html.twig">Home</a></li>
-                                    <li><a class="owl-next ">Présentation</a></li>
-                                    <li><a href="./contact.html">Contact</a></li>
+                                    <li class="cursor" data-target="#carouselExampleIndicators" data-slide-to="0"><a
+                                                href="http://localhost:8080/scarfolio/public/">Home</a></li>
+                                    <li><a class="cursor" data-target="#carouselExampleIndicators" data-slide-to="1">Présentation</a>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
                         </div>
-                    </nav>
                 </div>
+                </nav>
             </div>
+        </div>
         </div>
     </header>
     <!-- Header Area End -->
 
     <!-- Welcome Area Start -->
-    <section class="welcome-area">
-        <div class="welcome-slides owl-carousel">
-            <!-- Single Slide -->
-            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bckgd.png);">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <!-- Welcome Text -->
-                        <div class="col-12 col-lg-8 col-xl-6">
-                            <div class="welcome-text">
-                                <h2>Antoine <br>Duchemin</h2>
-                                <p>I photograph very instinctively. I
-                                    see
-                                    how it is taken like that. I do not follow certain styles, philosophies or
-                                    teachers.</p>
-                                <div class="hero-btn-group">
-                                    <a href="#" class="btn alime-btn mb-3 mb-sm-0 mr-4">Contact</a>
-                                    <a class="hero-mail-contact"
-                                       href="mailto:antoine.g.duchemin@gmail.com">antoine.g.duchemin@gmail.com</a>
+    <section class="welcome-area"></section>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bckgd.png);">
+                    <div class="container h-100">
+                        <div class="row h-100 align-items-center">
+                            <!-- Welcome Text -->
+                            <div class="col-12 col-lg-8 col-xl-6">
+                                <div class="welcome-text">
+                                    <h2>Antoine <br>Duchemin</h2>
+                                    <p>Je choisis une personne paresseuse pour un travail difficile, car une personne
+                                        paresseuse va trouver un moyen facile de le faire.</p>
+                                    <div class="hero-btn-group">
+                                        <a href="mailto:antoine.g.duchemin@gmail.com"
+                                           class="btn alime-btn mb-3 mb-sm-0 mr-4">Contact</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="carousel-item">
+                <div id="slide_2" class="single-welcome-slide  bg-img bg-overlay"
+                     style="background-image: url(img/bckgd4.jpg);">
+                    <div class="container h-100">
+                        <div class="row h-100 align-items-center">
+                            <!-- Welcome Text -->
 
-
-        <!-- Single Slide -->
-
-        <!-- Single Slide -->
-        <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bckgd.png);">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center">
-                    <!-- Welcome Text -->
-                    <div class="col-12 col-lg-4 col-xl-6">
-                        <div class="welcome-text">
-                            <img class="img-fluidC" src="img/photoProfilAntoine.jpg" alt="">
+                            <div class="card mb-3">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img class="card-img" src="img/PhotoPresentation.jpg" alt="">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">A propos de moi</h5>
+                                            <p class="card-text">
+                                                Passionné par la 3D, le design et le jeux
+                                                vidéo.<br>
+                                                Ce site est là pour présenter l'essentiel de mes
+                                                créations.
+                                                Je travaille essentiellement sur Blender, Krita, Unreal engine 4 et 3D
+                                                Coat.<br>
+                                                Connaissance avancée en dessins, Digital Painting, Texturing,
+                                                Modélisation et Animation 3D.<br>
+                                                Mon objectif est de créer, de l'idée au concret,
+                                                du croquis papier à la modélisation en 3D, des portes vers d'autres mondes où
+                                                l'imagination est
+                                                la seul limite.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {#                            <div class="col-12 col-lg-4 col-xl-6">#}
+                            {#                                <div class="welcome-text">#}
+                            {#                                    <img class="img-fluidC" src="img/PhotoPresentation.jpg" alt="">#}
+                            {#                                </div>#}
+                            {#                            </div>#}
+                            {#                            <div class="col-12 col-lg-8 col-xl-6">#}
+                            {#                                <p class="p-presentation ">Passionné par la 3D, le design et le jeux vidéo.</p>#}
+                            {#                                <p class="p-presentation ">Ce site est là pour présenter l'essentiel de mes créations.#}
+                            {#                                    Je travaille essentiellement sur Blender, Krita, Unreal engine 4 et 3D Coat.#}
+                            {#                                    Connaissance avancée en dessins, Digital Painting, Texturing, Modélisation et#}
+                            {#                                    Animation 3D.</p>#}
+                            {#                                <p class="p-presentation ">Mon objectif est de créer, de l'idée au concret, du croquis#}
+                            {#                                    papier à la modélisation en 3D, des portes vers d'autres mondes ou l'imagination est#}
+                            {#                                    la seul limite.#}
+                            {#                                </p>#}
+                            {#                            </div>#}
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-8 col-xl-6">
-                        <p class="p-presentation ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                            accusamus ad
-                            adipisci aliquam animi at atque culpa doloremque doloribus ea earum enim eos et
-                            labore
-                            libero minima molestias, neque obcaecati odio omnis optio pariatur porro praesentium
-                            deserunt doloremque dolorum ducimus earum, expedita fuga ipsum itaque labore
-                            laudantium
-                            provident rerum sed similique soluta. Animi, consequatur deserunt distinctio
-                            dolore!</p>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-    </section>
-    <!-- Single Slide -->
-
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-
 
 
     <!-- Gallery Area Start -->
@@ -133,36 +168,36 @@
             <div class="col-12">
                 <!-- Projects Menu -->
                 <div class="alime-projects-menu">
-                    <div class="portfolio-menu text-center">
-                        {% if game is empty %}
-                            <button class="btn active" data-filter=".game">Game Design</button>
-                        {% endif %}
-                        <button type="button" class="btn" data-filter="none" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                            Modèle 3D
-                        </button>
-                        <div class="dropdown-menu">
-                            {% for modele in modele %}
-                                <button class="dropdown-item"
-                                        data-filter=".{{ modele.id }}">{{ modele.libelle }}</button> {% endfor %}
-                        </div>
-                        {% if level is empty %}
-                            <button class="btn" data-filter=".level">Level Design</button>
-                        {% else %}
-                            <button type="button" class="btn" data-filter="none" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                Level Design
-                            </button>
-                            <div class="dropdown-menu">
-                                {% for level in level %}
-                                    <button class="dropdown-item"
-                                            data-filter=".{{ level.id }}">{{ level.libelle }}</button>
-                                {% endfor %}
-                                <button class="dropdown-item" data-filter=".level_autre">Autre</button>
+                    <div class="portfolio-menu ">
+                        <div class="row center-div">
+                            <button class="btn active" data-filter=".level">Level Design</button>
+                            <div class="dropdown">
+                                <button type="button" class="btn" data-filter="none" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                    Game Design
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    {% for game in games %}
+                                        <button class="dropdown-item"
+                                                data-filter=".{{ game.id }}">{{ game.libelle }}</button>
+                                    {% endfor %}
+                                </div>
                             </div>
-                        {% endif %}
+                            <div class="dropdown">
+                                <button type="button" class="btn" data-filter="none" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                    Modèle 3D
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    {% for modele in modeles %}
+                                        <button class="dropdown-item"
+                                                data-filter=".{{ modele.id }}">{{ modele.libelle }}</button>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <button class="btn" data-filter=".dessin">Dessin</button>
+                        </div>
 
-                        <button class="btn" data-filter=".dessin">Dessin</button>
                     </div>
                 </div>
             </div>
@@ -206,60 +241,77 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!-- Footer -->
     <footer class="pt-5 pb-4" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h5 class="mb-4 font-weight-bold contact">CONTACT</h5>
-                    <ul class="f-address">
-                        <li>
-                            <div class="row">
-                                <div class="col-1"><i class="fas fa-map-marker"></i></div>
-                                <div class="col-10">
-                                    <h6 class="font-weight-bold mb-0">Address:</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-1"><i class="far fa-envelope"></i></div>
-                                <div class="col-10">
-                                    <h6 class="font-weight-bold mb-0">Have any questions?</h6>
-                                    <p><a href="#">Support@userthemes.com</a></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-1"><i class="fas fa-phone-volume"></i></div>
-                                <div class="col-10">
-                                    <h6 class="font-weight-bold mb-0">Address:</h6>
-                                    <p><a href="#">+XX (0) XX XX-XXXX-XXXX</a></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+
+        <div class="container-fluid">
+            <div class="row center-div">
+                <div class="col-12 col-lg-4">
+                    <i class="fas fa-map-marker"> Adresse :</i>
+                    <p>Vannes 56000<br>Morbihan</p>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <i class="far fa-envelope"> Contact :</i>
+                    <p>Vous pouvez me contacter, pour toutes questions : <a href="mailto:antoine.g.duchemin@gmail.com"
+                                                                            class="btn btn-secondary mb-3 mb-sm-0 mr-4">ici</a>
+                    </p>
+
+                </div>
+                <div class="col-12 col-lg-4">
+                    <i class="far fa-user"> A propos:</i>
+                    <p>Je choisis une personne paresseuse pour un travail difficile, car une personne paresseuse va
+                        trouver un moyen facile de le faire.</p>
                 </div>
             </div>
-            <div class="row colorlib">
-                <div class="col-12">
-                    <div class="footer-content d-flex align-items-center justify-content-between">
-                        <!-- Copywrite Text -->
-                        <div class="copywrite-text">
-                            <p>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;
-                                <script>
-                                    document.write(new Date().getFullYear());
-                                </script>
-                                All rights reserved | This template is made with <i class="far fa-heart"></i> by <a
-                                        href="https://colorlib.com" target="_blank">Colorlib</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-                        </div>
-                        <!-- Footer Logo -->
+        </div>
 
+
+        {#        <div class="container">#}
+        {#            <div class="row">#}
+        {#                <div class="col-lg-12">#}
+        {#                    <h5 class="mb-4 font-weight-bold contact">CONTACT</h5>#}
+        {#                </div>#}
+        {#                <div class="col-12 col-lg-4">#}
+        {#                <div class="f-address">#}
+        {#                            <i class="fas fa-map-marker"></i></div>#}
+        {#                            <h6 class="font-weight-bold mb-0">Adresse:</h6>#}
+        {#                            <p>56000 Vannes </p>#}
+        {#                            <p>Morbihan </p>#}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                    <div class="col-12 col-lg-4">#}
+        {#                                <h6 class="font-weight-bold mb-0">Have any questions?</h6>#}
+        {#                                <p><a href="#">Support@userthemes.com</a></p>#}
+        {#                            </div>#}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                    <div class="col-12 col-lg-4">#}
+        {#                                <h6 class="font-weight-bold mb-0">Address:</h6>#}
+        {#                                <p><a href="#">+XX (0) XX XX-XXXX-XXXX</a></p>#}
+        {#                            </div>#}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#            </div>#}
+        {#    #}
+
+
+        <div class="row colorlib ">
+            <div class="col-12">
+                <div class="footer-content d-flex align-items-center justify-content-between">
+                    <!-- Copywrite Text -->
+                    <div class="copywrite-text center-div">
+                        <p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            All rights reserved | This template is made with <i class="far fa-heart"></i> by <a
+                                    href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
                     </div>
+                    <!-- Footer Logo -->
+
                 </div>
             </div>
         </div>

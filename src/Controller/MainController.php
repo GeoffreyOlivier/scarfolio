@@ -68,10 +68,10 @@ class MainController extends AbstractController
 
 
         return $this->render('index/index.html.twig', [
-            'game' => $game,
+            'games' => $game,
             'level' => $level,
             'dessin' => $dessin,
-            'modele' => $modele,
+            'modeles' => $modele,
             'photo' => $photo,
 
         ]);

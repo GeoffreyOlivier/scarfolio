@@ -6,7 +6,7 @@ $(document).ready(function () {
     $container.imagesLoaded(function () {
         $container.isotope({
             itemSelector: 'figure',
-            filter: '.game',
+            filter: '.level',
             resizable: false,
             animationEngine: 'jquery'
         });
